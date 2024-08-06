@@ -4,6 +4,7 @@ import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
+import android.os.Bundle;
 
 class MainActivity : ReactActivity() {
 
@@ -12,7 +13,10 @@ class MainActivity : ReactActivity() {
    * rendering of the component.
    */
   override fun getMainComponentName(): String = "one_kevink"
-
+  @Override
+    protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(null);
+    }
   /**
    * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
    * which allows you to enable New Architecture with a single boolean flags [fabricEnabled]
